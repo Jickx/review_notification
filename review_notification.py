@@ -141,10 +141,11 @@ def sending_email():
     """Get as input html string and send email with it"""
 
     password = input("Enter your password: ")
+    email = input("Enter reciever email: ")
     yag = yagmail.SMTP("shopeereviewnotification@gmail.com", password)
     html_msg = generate_html()
 
     if html_msg:
-        yag.send("valentin.sharonov@gmail.com", "Revew notification", html_msg)
+        yag.send(email, "Review notification", html_msg)
 
 sending_email()
