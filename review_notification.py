@@ -140,8 +140,11 @@ def generate_html():
 def sending_email():
     """Get as input html string and send email with it"""
 
-    password = input("Enter your password: ")
-    email = input("Enter reciever email: ")
+    # Change password here to desired
+    password = ""
+    
+    # Enter reciever email
+    email = ""
     yag = yagmail.SMTP("shopeereviewnotification@gmail.com", password)
     html_msg = generate_html()
 
